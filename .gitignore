@@ -1,5 +1,6 @@
 node_modules/
 .cache/
-node_modules/table/dist/
+public/
+package-lock.json
 
-public/static/d/
+\.idea/
