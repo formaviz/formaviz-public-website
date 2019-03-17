@@ -1,0 +1,5 @@
+node_modules/
+.cache/
+node_modules/table/dist/
+
+public/static/d/
