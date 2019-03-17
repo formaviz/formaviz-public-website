@@ -1,7 +1,7 @@
 
 ---
-Les grands secteurs de l'économie : primaire, secondaire, tertiaire
-23-04-2018
+title: Les grands secteurs de l'économie : primaire, secondaire, tertiaire
+date: "2015-05-01T22:12:03.284Z"
 ---
 La classification de l’économie en trois secteurs principaux selon la nature de l’activité résulte des travaux de l’économiste anglais Colin Clark sur “Les conditions du progrès économique” (1947), repris par le théoricien français Jean Fourastié.
 

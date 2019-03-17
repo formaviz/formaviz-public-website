@@ -1,7 +1,7 @@
 
 ---
-Université : les bonnes filières pour décrocher un emploi
-21-04-2018
+title: Université : les bonnes filières pour décrocher un emploi
+date: "2015-05-01T22:12:03.284Z"
 ---
 
 90% des titulaires d’un master trouvent un emploi dans les 30 mois après leur diplôme, mais des disparités fortes existent entre les filières. Si l’informatique ou les mathématiques tirent leur épingle du jeu, l’histoire-géographie ou les sciences de la vie et de la terre affichent de moins bons scores.

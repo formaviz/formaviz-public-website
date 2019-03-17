@@ -1,7 +1,7 @@
 
 ---
-Comment bien choisir ses études?
-16-04-2018
+title: Comment bien choisir ses études?
+date: "2015-05-01T22:12:03.284Z"
 ---
 BTS ou licence ? Privé ou public ? Alternance ou non ? Il est souvent difficile de s'orienter parmi le vaste choix de formations offertes en France. Voici quelques conseils pour vous permettre d'étayer votre recherche.
 Que ce soit après le bac, un CAP, une réorientation après une licence, savoir ce que l'on veut faire de sa vie n'est pas une évidence pour tous. Voici quelques conseils afin de vous aider à trouver votre voie.
