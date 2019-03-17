@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `formazy`,
+    title: `Formaviz`,
   },
   plugins: [
     {
@@ -51,8 +51,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Formaviz`,
+        short_name: `Formaviz`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
