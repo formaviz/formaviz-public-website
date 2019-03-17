@@ -31,7 +31,7 @@ class Login extends React.Component {
             </div>
             <div className="card-footer text-muted">
                 <label> Pas encore de compte ? </label>
-                <a href="register"> S'inscrire </a>
+                <a href="/register"> S'inscrire </a>
             </div>
             <label>  </label>
         </div>)
