@@ -1,6 +1,6 @@
 ---
-L'informatique, ce secteur d'avenir... qui ne fait pas rêver
-25-04-2018
+title: L'informatique, ce secteur d'avenir... qui ne fait pas rêver
+date: "2015-05-01T22:12:03.284Z"
 ---
 
 Très recherché, bien rémunéré et porteur de nombreux débouchés, le métier d'informaticien peine pourtant à susciter l'intérêt des jeunes générations. C'est ce que révèle une étude réalisée conjointement par l'institut britannique YouGov et le fournisseur de logiciel CA Technologies, à l'occasion de la journée internationale des développeurs informatiques. Mené auprès d'un échantillon représentatif de millennials français (de 18 à 34 ans), le sondage s'est intéressé à la perception du métier dans cette tranche de la population, première génération à avoir grandi avec internet et le numérique.
