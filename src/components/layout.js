@@ -2,6 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 import { Navbar,Nav,NavDropdown} from 'react-bootstrap';
+import Chatbot from 'formaviz-chatbot/dist/bundle';
 
 class Layout extends React.Component {
 
@@ -53,6 +54,7 @@ class Layout extends React.Component {
         <div>
           <header>{header}</header>
           <main>{children}</main>
+          <Chatbot isAuthenticated={true} position="BottomRight" />
         </div>
     )
   }
