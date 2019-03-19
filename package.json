@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "bootstrap-material-design": "^4.1.1",
     "gatsby": "^2.1.22",
     "gatsby-image": "^2.0.31",
@@ -26,6 +27,7 @@
     "popper.js": "^1.14.7",
     "prismjs": "^1.15.0",
     "react": "^16.8.3",
+    "react-bootstrap": "^1.0.0-beta.5",
     "react-dom": "^16.8.3",
     "react-helmet": "^5.2.0",
     "react-typography": "^0.16.18",
