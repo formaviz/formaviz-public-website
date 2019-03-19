@@ -43,6 +43,7 @@ class Layout extends React.Component {
             <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
           </NavDropdown>
           <Nav.Link href="/blog">Blog</Nav.Link>
+            <Nav.Link href="/login">login</Nav.Link>
         </Nav>
         </Navbar.Collapse>
       </Navbar>
