@@ -69,16 +69,16 @@ class Register extends React.Component {
     signIn(callbackSuccess, callbackError){
         console.log("[signIn]: email: " + this.getEmail() + ", firstName: " + this.getFirstName() + ", lastName: " + this.getlastName());
 
-        console.log("input:")
+        console.log("input:");
         console.log(this.input);
         axios.post(this.urlSignUp, this.input)
             .then(function (response) {
-                    console.log(response)
-                    callbackSuccess(response)
+                    console.log(response);
+                    callbackSuccess(response);
             })
             .catch(function (error) {
                 console.log("Error: ");
-                console.log(error)
+                console.log(error);
                 callbackError(error)
             });
 

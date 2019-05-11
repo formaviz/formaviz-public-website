@@ -1,8 +1,14 @@
 import React from "react"
 import axios from "axios";
 
+
+import { useCookies } from 'react-cookie';
+
+
+
 class Login extends React.Component {
     urlLogin = "http://formaviz-backend.cleverapps.io/api/v1/login";
+
     showSuccess = false;
     input = {
         "email": "",
@@ -17,6 +23,7 @@ class Login extends React.Component {
         this.getEmail = this.getEmail.bind(this);
         this.getPassword = this.getPassword.bind(this);
 
+        this.callbackSuccess = this.callbackSuccess.bind(this);
     }
 
 
@@ -35,7 +42,9 @@ class Login extends React.Component {
     }
 
     callbackSuccess(response){
-        alert("Success")
+        console.log("token" + response.access_token);
+        useCookies('jsessionid', "toto", { domain: 'formaviz'  })
+        window.location = "/";
     }
 
     callbackError(error){
