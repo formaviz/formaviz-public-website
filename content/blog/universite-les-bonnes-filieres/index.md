@@ -1,6 +1,5 @@
-
 ---
-title: Université : les bonnes filières pour décrocher un emploi
+title: Université, les bonnes filières pour décrocher un emploi
 date: "2015-05-01T22:12:03.284Z"
 ---
 

@@ -2,13 +2,25 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 import { Navbar,Nav,NavDropdown} from 'react-bootstrap';
+import Chatbot from 'formaviz-chatbot/dist/bundle';
+import {  lireCookie } from "../utils/cookieUtil";
 
 class Layout extends React.Component {
 
-  render() {
-    const { location, title, children } = this.props
 
-    
+  render() {
+    const { location, title, children } = this.props ;
+    const islogin = lireCookie('jessionid') != null;
+
+    var blog;
+    if (islogin) {
+      blog = <Nav.Link href="/blog">Blog</Nav.Link>;
+    } else {
+      blog = "";
+    }
+
+    const userManagement=islogin? "logout":"login"
+
     let header = (
       <Navbar style={{background: '#467d97'}}>
       <Navbar.Brand href="/">
@@ -36,14 +48,11 @@ class Layout extends React.Component {
         <Nav className="mr-auto">
           <Nav.Link href="/">Home</Nav.Link>
           <NavDropdown title="Services" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-            <NavDropdown.Divider />
-            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+            <NavDropdown.Item href="https://formaviz.front-formation.cleverapps.io/liste">Formations</NavDropdown.Item>
+            <NavDropdown.Item href="https://formaviz.slack.com/messages/CGZUKGARE/" target="_blank">Messager</NavDropdown.Item>
           </NavDropdown>
-          <Nav.Link href="/blog">Blog</Nav.Link>
-            <Nav.Link href="/login">login</Nav.Link>
+          {blog}
+          <Nav.Link href={"/"+userManagement}>{userManagement}</Nav.Link>
         </Nav>
         </Navbar.Collapse>
       </Navbar>
@@ -53,6 +62,7 @@ class Layout extends React.Component {
         <div>
           <header>{header}</header>
           <main>{children}</main>
+          <Chatbot isAuthenticated={islogin} position="BottomRight" />
         </div>
     )
   }

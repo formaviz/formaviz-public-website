@@ -1,8 +1,8 @@
-
 ---
-title: Les grands secteurs de l'économie : primaire, secondaire, tertiaire
+title: "Les grands secteurs de l'économie : primaire, secondaire, tertiaire"
 date: "2015-05-01T22:12:03.284Z"
 ---
+
 La classification de l’économie en trois secteurs principaux selon la nature de l’activité résulte des travaux de l’économiste anglais Colin Clark sur “Les conditions du progrès économique” (1947), repris par le théoricien français Jean Fourastié.
 
 Le groupement des activités économiques de production se fonde sur la notion de secteurs d’activité. Un secteur d’activité regroupe des entreprises de fabrication, de commerce ou de service qui ont la même activité principale dans une nomenclature d’activité économique donnée. A la différence de la branche d’activité, qui regroupe des unités de production homogènes, un secteur regroupe des entreprises classées selon leur activité principale.
