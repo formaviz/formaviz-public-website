@@ -25,7 +25,7 @@ class Login extends React.Component {
 
         this.callbackSuccess = this.callbackSuccess.bind(this);
         if(lireCookie('jessionid') != null){
-          window.location = "/";
+          if(typeof window !== "undefined") window.location = "/";
         }
     }
 
@@ -47,7 +47,7 @@ class Login extends React.Component {
     callbackSuccess(response){
         console.log("token" + response.data.access_token);
         createCookie('jessionid',response.data.access_token,36000)
-        window.location = "/";
+        if(typeof window !== "undefined") window.location = "/";
     }
 
     callbackError(error){
