@@ -1,9 +1,9 @@
 import React from "react"
 import axios from "axios";
-
-
-import { useCookies } from 'react-cookie';
-
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import { graphql } from "gatsby";
+import { createCookie, lireCookie } from "../utils/cookieUtil";
 
 
 class Login extends React.Component {
@@ -24,6 +24,9 @@ class Login extends React.Component {
         this.getPassword = this.getPassword.bind(this);
 
         this.callbackSuccess = this.callbackSuccess.bind(this);
+        if(lireCookie('jessionid') != null){
+          window.location = "/";
+        }
     }
 
 
@@ -42,8 +45,8 @@ class Login extends React.Component {
     }
 
     callbackSuccess(response){
-        console.log("token" + response.access_token);
-        useCookies('jsessionid', "toto", { domain: 'formaviz'  })
+        console.log("token" + response.data.access_token);
+        createCookie('jessionid',response.data.access_token,36000)
         window.location = "/";
     }
 
@@ -71,28 +74,60 @@ class Login extends React.Component {
     }
 
     render(){
-        return (<div className="card align-middle mx-auto w-50 p-3 text-center">
+      const { data } = this.props
+      const siteTitle = data.site.siteMetadata.title
+
+      return (
+        <Layout location={this.props.location} title={siteTitle}>
+          <SEO title="Login" />
+          <div className="card align-middle mx-auto w-50 p-3 text-center">
             <form>
-                <div className="card-header"> Login </div>
-                <div className="card-body">
-                    <div className="input-group mb-3">
-                        <input className="form-control" type="text" placeholder="Email" onChange={this.setEmail}/>
-                    </div>
-                    <div className="input-group mb-3">
-                        <input className="form-control" type="password" placeholder="password" onChange={this.setPassword}/>
-                    </div>
+              <div className="card-header"> Login </div>
+              <div className="card-body">
+                <div className="input-group mb-3">
+                  <input className="form-control" type="text" placeholder="Email" onChange={this.setEmail}/>
                 </div>
+                <div className="input-group mb-3">
+                  <input className="form-control" type="password" placeholder="password" onChange={this.setPassword}/>
+                </div>
+              </div>
             </form>
             <div className="justify-content-center">
-                <button onClick={() => this.logIn(this.callbackSuccess,this.callbackError)}>Connexion</button>
+              <button onClick={() => this.logIn(this.callbackSuccess,this.callbackError)}>Connexion</button>
             </div>
             <div className="card-footer text-muted">
-                <label> Pas encore de compte ? </label>
-                <a href="/register"> S'inscrire </a>
+              <label> Pas encore de compte ? </label>
+              <a href="/register"> S'inscrire </a>
             </div>
             <label>  </label>
-        </div>)
+          </div>
+        </Layout>
+      )
     }
 }
 
 export default Login
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+          }
+        }
+      }
+    }
+  }
+`

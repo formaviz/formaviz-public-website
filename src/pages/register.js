@@ -1,5 +1,9 @@
 import React from "react"
 import axios from "axios"
+import { graphql } from "gatsby";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import {  lireCookie } from "../utils/cookieUtil";
 
 class Register extends React.Component {
     urlSignUp = "http://formaviz-backend.cleverapps.io/api/v1/signup";
@@ -27,6 +31,9 @@ class Register extends React.Component {
         this.getEmail = this.getEmail.bind(this);
         this.getPassword = this.getPassword.bind(this);
 
+          if(lireCookie('jessionid') != null){
+            window.location = "/";
+          }
         //this.signIn = this.signIn.bind(this);
     }
 
@@ -86,7 +93,12 @@ class Register extends React.Component {
     }
 
     render() {
-        return (
+      const { data } = this.props
+      const siteTitle = data.site.siteMetadata.title
+
+      return (
+        <Layout location={this.props.location} title={siteTitle}>
+          <SEO title="Register" />
             <div className="card align-middle mx-auto w-50 p-3 text-center">
                 <form>
                     <div className="card-header"> S'enregistrer  </div>
@@ -113,8 +125,34 @@ class Register extends React.Component {
                     <a href="/login"> Se connecter</a>
                 </div>
             </div>
-        );
+        </Layout>
+
+      );
     }
 }
 
 export default Register
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+          }
+        }
+      }
+    }
+  }
+`
