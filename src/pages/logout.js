@@ -9,7 +9,7 @@ class Logout extends React.Component {
   constructor(props) {
     super(props);
     deleteCookie("jessionid")
-    window.location = "/";
+    if(typeof window !== "undefined") window.location = "/";
   }
 
 
