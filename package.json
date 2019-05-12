@@ -47,8 +47,8 @@
     "build": "gatsby build",
     "develop": "gatsby develop --port 8080",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run build",
-    "startOld": "gatsby serve --port 8080 --host 0.0.0.0",
+    "startTest": "npm run build",
+    "start": "gatsby serve --port 8080 --host 0.0.0.0",
     "startDev": "npm run develop",
     "server": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
