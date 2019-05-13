@@ -48,7 +48,7 @@ class Layout extends React.Component {
         <Nav className="mr-auto">
           <Nav.Link href="/">Home</Nav.Link>
           <NavDropdown title="Services" id="basic-nav-dropdown">
-            <NavDropdown.Item href="https://formaviz.front-formation.cleverapps.io/liste">Formations</NavDropdown.Item>
+            <NavDropdown.Item href="https://front-formation.formaviz.cleverapps.io/liste">Formations</NavDropdown.Item>
             <NavDropdown.Item href="https://formaviz.slack.com/messages/CGZUKGARE/" target="_blank">Messager</NavDropdown.Item>
           </NavDropdown>
           {blog}
