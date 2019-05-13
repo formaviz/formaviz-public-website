@@ -8,7 +8,7 @@
         var expire = "; expire="+date.toGMTString();
       }
       else var expire = "";
-      document.cookie = nom+"="+valeur+expire+"; path=/; Domain=localhost";
+      document.cookie = nom+"="+valeur+expire+"; path=/; Domain=formaviz.cleverapps.io";
     }
   }
 
