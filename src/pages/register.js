@@ -65,7 +65,7 @@ class Register extends React.Component {
     }
 
     callbackSuccess(response){
-        alert("Success")
+        if(typeof window !== "undefined") window.location = "/";
     }
 
     callbackError(error){
